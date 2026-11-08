@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerTrack | Internship Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CareerTrack</h1>
+    <p>Track your applications. Build your future.</p>
+</header>
+
+<main>
+    <section class="stats">
+        <div class="stat-card">
+            <h3>Total Applications</h3>
+            <p id="total">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Shortlisted</h3>
+            <p id="shortlisted">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Interviews</h3>
+            <p id="interviews">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Rejected</h3>
+            <p id="rejected">0</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2 id="formTitle">Add New Application</h2>
+
+        <form id="applicationForm">
+            <input type="hidden" id="editId">
+
+            <input type="text" id="company"
+                placeholder="Company Name" required>
+
+            <input type="text" id="role"
+                placeholder="Job / Internship Role" required>
+
+            <input type="date" id="date" required>
+
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Shortlisted">Shortlisted</option>
+                <option value="Interview">Interview</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Selected">Selected</option>
+            </select>
+
+            <input type="url" id="link"
+                placeholder="Application URL (optional)">
+
+            <button type="submit" id="submitBtn">
+                Add Application
+            </button>
+        </form>
+    </section>
+
+    <section class="applications">
+        <h2>My Applications</h2>
+
+        <div class="filters">
+            <input type="search" id="search"
+                placeholder="Search company or role...">
+
+            <select id="filter">
+                <option value="All">All Statuses</option>
+                <option value="Applied">Applied</option>
+                <option value="Shortlisted">Shortlisted</option>
+                <option value="Interview">Interview</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Selected">Selected</option>
+            </select>
+        </div>
+
+        <div id="applicationList"></div>
+    </section>
+</main>
+
+<footer>
+    <p>CareerTrack © 2026 | Your Career, Your Journey.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
